@@ -1,3 +1,53 @@
+# Scalable Containerized Deployment Pipeline
+
+## Overview
+This project is a scalable and automated containerized deployment pipeline built using AWS cloud services. It allows for the dynamic spinning up of containers for each build process, uploads the output to Amazon S3, and serves the content using a reverse proxy. The system is designed for efficient resource utilization, seamless deployment, and robust performance monitoring.
+
+## Table of Contents
+- [Architecture](#architecture)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Architecture
+![Architecture Diagram](path/to/architecture-diagram.png)
+
+The architecture includes the following components:
+1. **API Server**: Handles incoming API requests and triggers the container creation process.
+2. **Docker Containers**: Each build process runs inside an isolated Docker container.
+3. **AWS ECS**: Manages the orchestration of Docker containers.
+4. **Amazon S3**: Stores the output of each build process.
+5. **Reverse Proxy**: Streams content directly from S3 to the user.
+6. **PostgreSQL**: Stores user and project details, as well as logs.
+7. **Redis Server**: Central server for logging, enabling efficient log management.
+8. **Socket Server**: Subscribes to logs and streams them in real-time.
+
+## Features
+- **Dynamic Container Deployment**: Containers are spun up dynamically for each build process.
+- **Centralized Storage**: Build outputs are stored in Amazon S3 for easy access and retrieval.
+- **Reverse Proxy**: Serves content directly from S3 to the user.
+- **Centralized Logging**: Logs are collected and managed using Redis.
+- **Scalability**: The architecture is designed to scale efficiently with increasing load.
+
+## Tech Stack
+- **Programming Language**: Node.js
+- **Containerization**: Docker
+- **Orchestration**: AWS ECS
+- **Storage**: Amazon S3
+- **Database**: PostgreSQL
+- **Logging**: Redis
+- **Reverse Proxy**: Node.js and HTTP-Proxy
+- **Other Tools**: AWS SDK, Socket.io, Nginx
+
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+
+
 This is a scalable and automated containerized Deployment Pipleline, leveraging some AWS services...
 
 STEP 1: On the UI, Users will get a Input field wherein they can paste the link for the project's source code they need to deploy and press the deploy button.
