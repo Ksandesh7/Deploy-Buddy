@@ -3,18 +3,9 @@
 ## Overview
 This project is a scalable and automated containerized deployment pipeline built using AWS cloud services. It allows for the dynamic spinning up of containers for each build process, uploads the output to Amazon S3, and serves the content using a reverse proxy. The system is designed for efficient resource utilization, seamless deployment, and robust performance monitoring.
 
-## Table of Contents
-- [Architecture](#architecture)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Architecture
-![Architecture Diagram](path/to/architecture-diagram.png)
+![image](https://github.com/user-attachments/assets/64d8f4ad-8b6b-488f-bfa7-e849942f0173)
 
 The architecture includes the following components:
 1. **API Server**: Handles incoming API requests and triggers the container creation process.
@@ -22,9 +13,8 @@ The architecture includes the following components:
 3. **AWS ECS**: Manages the orchestration of Docker containers.
 4. **Amazon S3**: Stores the output of each build process.
 5. **Reverse Proxy**: Streams content directly from S3 to the user.
-6. **PostgreSQL**: Stores user and project details, as well as logs.
-7. **Redis Server**: Central server for logging, enabling efficient log management.
-8. **Socket Server**: Subscribes to logs and streams them in real-time.
+6. **Redis Server**: Central server for logging, enabling efficient log management.
+7. **Socket Server**: Subscribes to logs and streams them in real-time.
 
 ## Features
 - **Dynamic Container Deployment**: Containers are spun up dynamically for each build process.
