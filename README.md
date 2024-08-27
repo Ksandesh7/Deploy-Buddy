@@ -38,8 +38,7 @@ The architecture includes the following components:
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
 
 
-This is a scalable and automated containerized Deployment Pipleline, leveraging some AWS services...
-
+## User WorkFlow
 STEP 1: On the UI, Users will get a Input field wherein they can paste the link for the project's source code they need to deploy and press the deploy button.
 ![image](https://github.com/user-attachments/assets/1b405dba-c53b-4713-a407-1477bbb3312c)
 
